@@ -1,0 +1,20 @@
+        lbl_coursetable = Label(self.root, text="course table", font=("goudy old style", 15,'bold'), bg='white').place(x=720,y=360, width=470, height=20)   
+
+
+ self.logo_dash = ImageTk.PhotoImage(file="images/logo.jpeg")
+        
+
+        title = Label(self.root, text="Result Management System",padx=10,compound=LEFT,image=self.logo_dash, font=("goudy old style", 20, "bold"), bg="#033054", fg="white").place(x=0, y=0, relwidth=1,height=50)
+
+
+ rows = cur.fetchall()  # <
+
+
+  self.btn_add = Button(self.root, text="save", font=("goudy old style", 15,'bold'), bg='#2196f3', fg='white', cursor="hand2",command=self.add)
+        self.btn_add.place(x=150,y=400, width=110, height=40)
+        self.btn_add = Button(self.root, text="update", font=("goudy old style", 15,'bold'), bg='#4caf50', fg='white', cursor="hand2",command=self.update)
+        self.btn_add.place(x=270,y=400, width=110, height=40)
+        self.btn_add = Button(self.root, text="delete", font=("goudy old style", 15,'bold'), bg='#f44336', fg='white', cursor="hand2",command=self.delete)
+        self.btn_add.place(x=390,y=400, width=110, height=40)
+        self.btn_add = Button(self.root, text="clear", font=("goudy old style", 15,'bold'), bg='#607d8d', fg='white', cursor="hand2",command=self.clear)
+        self.btn_add.place(x=510,y=400, width=110, height=40)
