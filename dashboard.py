@@ -57,7 +57,7 @@ class rms:
 
     def add_student(self):
         self.new_win=Toplevel(self.root)
-        self.new_obj=studentclass(self.new_win)
+        self.new_obj=studentclass(self.new_win) 
 
     def add_result(self):
         self.new_win=Toplevel(self.root)
