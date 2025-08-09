@@ -2,6 +2,8 @@ from tkinter import *
 from PIL import Image,ImageTk
 from course import courseclass
 from student import studentclass
+from result import resultclass
+from report import reportclass
 class rms:
     def __init__(self, root):
         self.root = root
@@ -27,8 +29,8 @@ class rms:
 
         btn_course = Button(M_frame, text="Course", font=("goudy old style",15,"bold"),bg="#0b5377",fg="white" , cursor="hand2",command=self.add_course).place(x=20,y=5,width=200,height=40)
         btn_student = Button(M_frame, text="Student", font=("goudy old style",15,"bold"),bg="#0b5377",fg="white", cursor="hand2",command=self.add_student).place(x=270,y=5,width=200,height=40)
-        btn_result = Button(M_frame, text="Result", font=("goudy old style",15,"bold"),bg="#0b5377",fg="white", cursor="hand2").place(x=520,y=5,width=200,height=40)
-        btn_view = Button(M_frame, text="View", font=("goudy old style",15,"bold"),bg="#0b5377",fg="white", cursor="hand2").place(x=770,y=5,width=200,height=40)
+        btn_result = Button(M_frame, text="Result", font=("goudy old style",15,"bold"),bg="#0b5377",fg="white", cursor="hand2",command=self.add_result).place(x=520,y=5,width=200,height=40)
+        btn_view = Button(M_frame, text="View student result", font=("goudy old style",15,"bold"),bg="#0b5377",fg="white", cursor="hand2",command=self.add_report).place(x=770,y=5,width=200,height=40)
         btn_logout = Button(M_frame, text="Logout", font=("goudy old style",15,"bold"),bg="#0b5377",fg="white", cursor="hand2").place(x=1020,y=5,width=200,height=40)
         btn_exit = Button(M_frame, text="Exit", font=("goudy old style",15,"bold"),bg="#0b5377",fg="white", cursor="hand2").place(x=1270,y=5,width=200,height=40)
 
@@ -56,6 +58,14 @@ class rms:
     def add_student(self):
         self.new_win=Toplevel(self.root)
         self.new_obj=studentclass(self.new_win)
+
+    def add_result(self):
+        self.new_win=Toplevel(self.root)
+        self.new_obj=resultclass(self.new_win)
+
+    def add_report(self):
+        self.new_win=Toplevel(self.root)
+        self.new_obj=reportclass(self.new_win)
 
 
 if __name__ == "__main__":
